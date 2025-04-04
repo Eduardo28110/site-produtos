@@ -2,8 +2,9 @@
 require_once __DIR__ . '/../../../config/env.php';
 require_once __DIR__ . '/../../../model/ProdutoModel.php';
 
-$artigoModel = new ProdutoModel();
-$lista = $artigoModel->listar();
+$produtoModel = new ProdutoModel();
+$lista = $produtoModel->listar();
+
 ?>
 
 <?php require_once __DIR__ . '/../../components/head.php'; ?>
@@ -13,7 +14,7 @@ $lista = $artigoModel->listar();
     <?php require_once __DIR__ . '/../../components/sidebar.php'; ?>
 
     <main class="content-adm">
-        <h3>Artigos >> Listagem</h3>
+        <h3>Produtos >> Listagem</h3>
 
         <div class="container">
             <div class="actions">
@@ -54,10 +55,13 @@ $lista = $artigoModel->listar();
                                     </span>
                                 </a>
                                 <form method="POST"
-                                    action="<?= APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'admin/produto.php?id=' . $item['id'] ?>">
-                                    <span class="btn-icon material-symbols-outlined" title="Excluir">
-                                        delete
-                                    </span>
+                                    action="<?= APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'admin/produto_excluir.php' ?>">
+                                    <input type="hidden" name="id" value="<?= $item['id'] ?>">
+                                    <button>
+                                        <span class="btn-icon material-symbols-outlined" title="Excluir">
+                                            delete
+                                        </span>
+                                    </button>
                                 </form>
                             </td>
                         </tr>

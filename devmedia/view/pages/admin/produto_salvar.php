@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($_POST['id'])) {
         // Criar - se não tiver id
-        $salvou = $produtoModel->criar($_POST['nome']);
+        $salvou = $produtoModel->criar($_POST['nome'], $_POST['descricao'], $_POST['categoria_id'], $_POST['preco'], $_POST['imagem_url'] );
     } else {
         // Editar - se tiver id
         $salvou = $produtoModel->editar([

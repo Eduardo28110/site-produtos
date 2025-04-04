@@ -6,7 +6,7 @@
     if (isset($_GET['id'])) {
         $modo = 'EDICAO';
         $usuarioModel = new UsuarioModel();
-        $usuario = $usuarioModel->buscarPorId($_GET['id']);
+        $usuario = $usuarioModel->buscarPorId((int) $_GET['id']);
     } else {
         $modo = 'CRIACAO';
         $usuario = [
@@ -28,17 +28,12 @@
     <?php require_once __DIR__ . '/../../components/sidebar.php'; ?>
 
     <main class="content-adm">
-        <h3>Usuários >> <?= $modo == 'EDICAO' ? 'Editar ' . $usuario['id'] : 'Criar' ?></h3>
+        <h1><?= $modo == 'EDICAO' ? 'Usuários ID: ' . $usuario['id'] : 'Criar Usuários' ?></h1>
 
         <div class="container">
-            <form class="form" method="POST" action="">
+            <form class="form" method="POST" action="<?= APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'admin/usuario_salvar.php' ?>">
                 <div class="form-content">
                     <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
-
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input name="email" type="email" value="<?= $usuario['email'] ?>" required>
-                    </div>
 
                     <div class="input-group">
                         <label for="nome">Nome</label>
@@ -46,13 +41,23 @@
                     </div>
 
                     <div class="input-group">
-                        <label for="dataNascimento">Data de nascimento</label>
-                        <input name="dataNascimento" type="date" value="<?= $usuario['dataNascimento'] ?>">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" value="<?= $usuario['email'] ?>" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input name="telefone" type="text" value="<?= $usuario['telefone'] ?>">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="data_nascimento">Data de nascimento</label>
+                        <input name="data_nascimento" type="date" value="<?= $usuario['data_nascimento'] ?>">
                     </div>
 
                     <div class="input-group">
                         <label for="cpf">CPF</label>
-                        <input name="cpf" type="text" value="<?= $usuario['cpf'] ?>">
+                        <input name="cpf" type="text" value="<?= $usuario['cpf'] ?>" required>
                     </div>
                 </div>
 
@@ -74,3 +79,4 @@
 </body>
 
 </html>
+

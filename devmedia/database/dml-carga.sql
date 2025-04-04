@@ -61,20 +61,21 @@ INSERT INTO artigo (titulo, conteudo, categoria_id) VALUES
 
 INSERT INTO usuario (nome, email, telefone, data_nascimento, cpf) VALUES
 ('João Silva', 'joao.silva@email.com', '(11) 99999-0001', '1990-01-15', '123.456.789-01'),
-('Maria Oliveira', 'maria.oliveira@email.com', '(11) 99999-0002', '1985-02-20', '123.456.789-02'),
-('Carlos Souza', 'carlos.souza@email.com', '(11) 99999-0003', '1992-03-25', '123.456.789-03'),
-('Ana Lima', 'ana.lima@email.com', '(11) 99999-0004', '1995-04-10', '123.456.789-04'),
-('Pedro Santos', 'pedro.santos@email.com', '(11) 99999-0005', '1988-05-30', '123.456.789-05'),
-('Juliana Costa', 'juliana.costa@email.com', '(11) 99999-0006', '1991-06-12', '123.456.789-06'),
-('Lucas Almeida', 'lucas.almeida@email.com', '(11) 99999-0007', '1994-07-05', '123.456.789-07'),
-('Fernanda Rocha', 'fernanda.rocha@email.com', '(11) 99999-0008', '1990-08-21', '123.456.789-08'),
-('Ricardo Mendes', 'ricardo.mendes@email.com', '(11) 99999-0009', '1987-09-09', '123.456.789-09'),
-('Camila Nogueira', 'camila.nogueira@email.com', '(11) 99999-0010', '1993-10-14', '123.456.789-10'),
-('Eduardo Ramos', 'eduardo.ramos@email.com', '(11) 99999-0011', '1989-11-17', '123.456.789-11'),
-('Bianca Ferreira', 'bianca.ferreira@email.com', '(11) 99999-0012', '1996-12-22', '123.456.789-12'),
-('Gustavo Teixeira', 'gustavo.teixeira@email.com', '(11) 99999-0013', '1986-01-08', '123.456.789-13'),
-('Larissa Carvalho', 'larissa.carvalho@email.com', '(11) 99999-0014', '1997-02-26', '123.456.789-14'),
-('Marcos Antunes', 'marcos.antunes@email.com', '(11) 99999-0015', '1984-03-18', '123.456.789-15');
+('Maria Oliveira', 'maria.oliveira@email.com', '(11) 99999-0002', '1985-02-20', '234.567.890-22'),
+('Carlos Souza', 'carlos.souza@email.com', '(11) 99999-0003', '1992-03-25', '345.678.901-33'),
+('Ana Lima', 'ana.lima@email.com', '(11) 99999-0004', '1995-04-10', '456.789.012-44'),
+('Pedro Santos', 'pedro.santos@email.com', '(11) 99999-0005', '1988-05-30', '567.890.123-55'),
+('Juliana Costa', 'juliana.costa@email.com', '(11) 99999-0006', '1991-06-12', '678.901.234-66'),
+('Lucas Almeida', 'lucas.almeida@email.com', '(11) 99999-0007', '1994-07-05', '789.012.345-77'),
+('Fernanda Rocha', 'fernanda.rocha@email.com', '(11) 99999-0008', '1990-08-21', '890.123.456-88'),
+('Ricardo Mendes', 'ricardo.mendes@email.com', '(11) 99999-0009', '1987-09-09', '901.234.567-99'),
+('Camila Nogueira', 'camila.nogueira@email.com', '(11) 99999-0010', '1993-10-14', '012.345.678-00'),
+('Eduardo Ramos', 'eduardo.ramos@email.com', '(11) 99999-0011', '1989-11-17', '321.654.987-10'),
+('Bianca Ferreira', 'bianca.ferreira@email.com', '(11) 99999-0012', '1996-12-22', '432.765.098-21'),
+('Gustavo Teixeira', 'gustavo.teixeira@email.com', '(11) 99999-0013', '1986-01-08', '543.876.109-32'),
+('Larissa Carvalho', 'larissa.carvalho@email.com', '(11) 99999-0014', '1997-02-26', '654.987.210-43'),
+('Marcos Antunes', 'marcos.antunes@email.com', '(11) 99999-0015', '1984-03-18', '765.098.321-54');
+
 
 INSERT INTO produto (nome, descricao, categoria_id, preco) VALUES
             'id' => '1',

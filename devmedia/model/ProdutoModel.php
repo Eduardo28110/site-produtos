@@ -3,12 +3,7 @@
 require_once __DIR__ . "/../config/Database.php";
 
 class ProdutoModel {
-    private $produtos;
-
-    private $produtoModel;
-
     private $tabela = "produto";
-
     private $conn;
     public function __construct() {
         $db = new Database();
@@ -31,7 +26,7 @@ class ProdutoModel {
         return $stmt->fetch();
     }
 
-    public function criar($nome) {
+    public function criar($nome, $descricao, $categoria_id, $preco, $imagem_url) {
         $query = "INSERT INTO $this->tabela (nome, descricao, categoria_id, preco, imagem_url) VALUES
          (:nome, :descricao, :categoria_id, :preco, :imagem_url);";
 
